@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(){
+    int numOfRobots;
+    int enginePower;
+    int resistance;
+    int weight;
+    int height;
+    int i;
+    int individualRobotPower;
+    int totalPower = 0;
+    
+    scanf("%d", &numOfRobots);
+    
+    for(i=0; i<numOfRobots; i++){
+        scanf("%d%d%d%d", &height, &weight, &enginePower, &resistance);
+        individualRobotPower = (enginePower + resistance) * (weight - height);
+        totalPower = totalPower + individualRobotPower;
+    }
+    
+    printf("%d", totalPower);
+    return 0;
+}
