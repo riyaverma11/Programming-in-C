@@ -1,0 +1,25 @@
+#include <stdio.h>
+// Your program must first read an integer indicating the number of grades to be averaged. 
+// Next, your program will read the grades one by one, all of which are integers as well. 
+// Finally, your program will calculate and print the average of the grades to two decimal places.
+int main(void) {
+    int numOfGrades;
+    int i;
+    int grade;
+    int sum = 0;
+    double doubleSum;
+    double doubleNumGrades;
+    
+    scanf("%d", &numOfGrades);
+    
+    for(i=0; i<numOfGrades; i++) {
+        scanf("%d", &grade);
+        sum = sum + grade;
+    }
+    
+    doubleSum = (double) sum;
+    doubleNumGrades = (double) numOfGrades;
+    printf("%.2lf", doubleSum/doubleNumGrades);
+    return 0;
+    
+}
