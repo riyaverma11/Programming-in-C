@@ -1,0 +1,4 @@
+// Your program should first read an integer representing the total population of the area. 
+// Knowing that a person was infected on day 1 and that each infected person contaminates 
+// two new people every day, you must calculate the day at which the entire population of 
+// the area will be infected
