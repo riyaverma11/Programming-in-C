@@ -25,3 +25,15 @@ int main(void) {
 
     return 0;
 }
+
+
+
+The output:
++-----------------------+                                                       
+| o | X | o | X | o | X |                                                       
+| X | o | X | o | X | o |                                                       
+| o | X | o | X | o | X |                                                       
+| X | o | X | o | X | o |                                                       
+| o | X | o | X | o | X |                                                       
+| X | o | X | o | X | o |                                                       
++-----------------------+ 
