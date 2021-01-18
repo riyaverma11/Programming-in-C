@@ -3,7 +3,7 @@
 
 //main function
 int main(void){
-    ////variable declaration
+    //variable declaration
     
     //executable statement
     printf("I ");
