@@ -17,9 +17,9 @@ int main(void) {
         sum = sum + grade;
     }
     
-    doubleSum = (double) sum;
+    doubleSum = (double) sum; //cast the integer sum to a double and store it in a variable of type double
     doubleNumGrades = (double) numOfGrades;
-    printf("%.2lf", doubleSum/doubleNumGrades);
+    printf("%.2lf", doubleSum/doubleNumGrades); //prints the double in two decimal places because we specified .2l
     return 0;
     
 }
