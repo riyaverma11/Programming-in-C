@@ -10,11 +10,11 @@ int main(void){
     double numOfBags;
     int numOfFullBags; //each 120 pound bag is $45
     
-    scanf("%lf", &cementNeeded);
+    scanf("%lf", &cementNeeded); //finding out cement needed to the decimal
     
-    numOfBags = cementNeeded/120;
-    numOfFullBags = (int) numOfBags;
-    numOfFullBags = numOfFullBags + 1;
+    numOfBags = cementNeeded/120; //returns a double
+    numOfFullBags = (int) numOfBags; //cast to an int (removes everything after decimal point)
+    numOfFullBags = numOfFullBags + 1; //add one to the total because we removed the remainder, however we need a whole bag for that extra
     
     printf("%d", numOfFullBags*45);
     return 0;
