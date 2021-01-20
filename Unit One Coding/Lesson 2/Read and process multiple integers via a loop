@@ -9,10 +9,10 @@ int main(){
     int individualRobotPower;
     int totalPower = 0;
     
-    scanf("%d", &numOfRobots);
+    scanf("%d", &numOfRobots); //number of robots specified by the user
     
-    for(i=0; i<numOfRobots; i++){
-        scanf("%d%d%d%d", &height, &weight, &enginePower, &resistance);
+    for(i=0; i<numOfRobots; i++){ //only loops for num of robots
+        scanf("%d%d%d%d", &height, &weight, &enginePower, &resistance); //getting user input for each of the robots
         individualRobotPower = (enginePower + resistance) * (weight - height);
         totalPower = totalPower + individualRobotPower;
     }
