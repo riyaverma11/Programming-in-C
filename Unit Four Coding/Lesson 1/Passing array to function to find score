@@ -14,9 +14,9 @@ int main(void) {
     int array[10];
     int N, i;
     
-    scanf("%d", &N);
+    scanf("%d", &N); //user input for number of players
     for (i=0; i<N; i++) {
-        scanf("%d", &array[i]);
+        scanf("%d", &array[i]); //read current scores of each player || loops through number of players
     }
     behind(array, N);
     for (i=0; i<N; i++) {
