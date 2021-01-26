@@ -1,1 +1,5 @@
-
+// Your first task is to write a function createStudent() that takes as inputs a 
+// string (namely a student's name) and an integer (their age) and that returns a 
+// pointer to a struct student which stores this information. Your function should 
+// dynamically allocate the memory required for this struct student and then write 
+// the student's name and age into this newly allocated memory. 
