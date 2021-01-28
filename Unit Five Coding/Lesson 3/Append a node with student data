@@ -30,3 +30,23 @@ int main(void) {
     printf("%s is %d years old.\n", start->name, start->age);
     printf("%s is %d years old.\n", start->next->name, start->next->age);
     printf("%s is %d years old.\n", start->next->next->name, start->next->next->age);
+
+    tmp = start->next;
+    free(start);
+    start = tmp;
+    tmp = start->next;
+    free(start);
+    free(tmp);
+
+    return 0;
+}
+
+/* Place your function definitions here. Be sure to include the definition for 
+   createStudent() and any other functions you created for the previous task. */
+struct student *createStudent(char studentName[], int studentAge) {
+    int i;
+    struct student *ptr;
+    ptr = (struct student *)malloc(sizeof(struct student));
+    for(i=0; i<50; i++) {
+        ptr->name[i] = studentName[i];
+    }
