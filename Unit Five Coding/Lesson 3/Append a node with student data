@@ -11,9 +11,10 @@ struct student {
       int age;
       struct student *next;
 };
+
+//function prototypes
 struct student *createStudent(char studentName[], int studentAge);
 struct student *append(struct student * end, struct student * newStudptr); 
-/* add other prototypes here if needed */
 
 int main(void) {
     struct student *start, *newStudptr, *end, *tmp;
@@ -41,8 +42,6 @@ int main(void) {
     return 0;
 }
 
-/* Place your function definitions here. Be sure to include the definition for 
-   createStudent() and any other functions you created for the previous task. */
 struct student *createStudent(char studentName[], int studentAge) {
     int i;
     struct student *ptr;
