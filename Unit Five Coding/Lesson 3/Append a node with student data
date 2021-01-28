@@ -50,3 +50,14 @@ struct student *createStudent(char studentName[], int studentAge) {
     for(i=0; i<50; i++) {
         ptr->name[i] = studentName[i];
     }
+    //ptr->name = studentName;
+    ptr->age = studentAge;
+    ptr->next = NULL;
+    return(ptr);
+}
+
+struct student *append(struct student * end, struct student * newStudptr) {
+    end->next = newStudptr;
+    end = newStudptr;
+    return(end);
+}
