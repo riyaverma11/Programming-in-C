@@ -12,9 +12,8 @@ struct student {
       struct student *next;
 };
 
+//function prototypes
 struct student *createStudent(char studentName[], int studentAge);
-
-// Write other function prototypes here (if any)
 void freeSpace(struct student * start);
 
 int main(void) {
@@ -28,7 +27,6 @@ int main(void) {
     return 0;
 }
 
-// Write your createStudent function here (and any other functions you see fit)
 struct student *createStudent(char studentName[], int studentAge) {
     int i;
     struct student *ptr;
