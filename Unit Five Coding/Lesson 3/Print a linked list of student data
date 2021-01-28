@@ -1,1 +1,4 @@
-
+// Your new task is to write a function printStudents() which takes as input a pointer
+// that holds the address of the start of a linked list of students. Your function 
+// should then print this list of students to the screen as specified in the example 
+// below. Your function should not return anything.
