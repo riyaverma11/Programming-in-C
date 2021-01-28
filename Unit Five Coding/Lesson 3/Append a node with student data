@@ -1,1 +1,5 @@
-
+// Your new task is to write a function append() which takes as input two pointers:
+// the first pointer holds the address of the current end of the linked list of students,
+// the second pointer points to a newly created student. Your function should append 
+// this new student to the linked list and return the address (a struct student *) of 
+// the new end of the list. 
