@@ -14,3 +14,32 @@ struct student {
 struct student *createStudent(char studentName[50], int studentAge);
 struct student * append(struct student * end, struct student * newStudptr); 
 void printStudents(struct student *start);
+
+int main(void) {
+    struct student *start, *newStudptr, *end, *tmp;
+    int ageP, ageR, ageM;
+
+    scanf("%d %d %d", &ageP, &ageR, &ageM);
+
+    start = createStudent("Petra", ageP);
+    end = start;
+
+    newStudptr = createStudent("Remi", ageR);
+    end = append(end, newStudptr);
+
+    newStudptr = createStudent("Mike", ageM);
+    end = append(end, newStudptr);
+
+    printStudents(start);
+    tmp = start->next;
+
+    free(start);
+
+    start = tmp;
+    tmp = start->next;
+
+    free(start);
+    free(tmp);
+
+    return 0;
+}
