@@ -3,3 +3,11 @@
 // the second pointer points to a newly created student. Your function should append 
 // this new student to the linked list and return the address (a struct student *) of 
 // the new end of the list. 
+#include <stdio.h>
+#include <stdlib.h>
+
+struct student {
+      char name[50];
+      int age;
+      struct student *next;
+};
