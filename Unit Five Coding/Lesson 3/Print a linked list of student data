@@ -56,3 +56,9 @@ struct student *createStudent(char studentName[], int studentAge) {
     ptr->next = NULL;
     return(ptr);
 }
+
+struct student *append(struct student * end, struct student * newStudptr) {
+    end->next = newStudptr;
+    end = newStudptr;
+    return(end);
+}
