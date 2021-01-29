@@ -2,3 +2,17 @@
 // pointer that holds the address of the start of a linked list of students. Your 
 // function should then free the space allocated for each student in this list of students.
 // Your function should not return anything.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct student {
+      char name[50];
+      int age;
+      struct student *next;
+};
+
+struct student *createStudent(char studentName[], int studentAge);
+struct student *append(struct student * end, struct student * newStudptr);
+void printStudents(struct student *start);
+void freeStudents(struct student *start);
