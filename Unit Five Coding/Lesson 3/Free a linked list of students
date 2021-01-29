@@ -35,3 +35,40 @@ int main(void) {
 
     return 0;
 }
+
+   struct student *createStudent(char studentName[], int studentAge) {
+    int i;
+    struct student *ptr;
+    ptr = (struct student *)malloc(sizeof(struct student));
+    for(i=0; i<50; i++) {
+        ptr->name[i] = studentName[i];
+    }
+    //ptr->name = studentName;
+    ptr->age = studentAge;
+    ptr->next = NULL;
+    return(ptr);
+}
+struct student *append(struct student * end, struct student * newStudptr) {
+    end->next = newStudptr;
+    end = newStudptr;
+    return(end);
+}
+
+void printStudents(struct student *start) {
+    //format: [name] is [age] years old.
+    struct student * pointer = start;
+    while (pointer!=NULL) {
+        printf("%s is %d years old.", pointer->name, pointer->age);
+        pointer = pointer->next;
+        printf("\n");
+    }
+}
+void freeStudents(struct student *start) {
+    struct student * freePointer = start;
+    struct student * tempPointer;
+    while (freePointer != NULL) {
+        tempPointer = freePointer->next;
+        free(freePointer);
+        freePointer = tempPointer;
+    }
+}
