@@ -3,3 +3,19 @@
 // function should then check whether the number stored in this linked list of digits
 // is divisible by three. The function should return the value 1 if indeed the number 
 // is divisible by three and it should return the value 0 otherwise.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct digit {
+    int num;
+    struct digit *next;
+};
+
+//prototypes here
+struct digit *createDigit(int dig);
+struct digit * append(struct digit * end, struct digit * newDigptr);
+void printNumber(struct digit *start);
+void freeNumber(struct digit *start);
+struct digit *readNumber(void);
+int divisibleByThree(struct digit * start);
