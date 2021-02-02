@@ -19,3 +19,16 @@ void printNumber(struct digit *start);
 void freeNumber(struct digit *start);
 struct digit *readNumber(void);
 int divisibleByThree(struct digit * start);
+
+int main(void) {
+    struct digit *start;
+    start = readNumber();
+    printf("The number ");
+    printNumber(start);
+    if (divisibleByThree(start)) 
+        printf("is divisible by 3.\n");
+    else
+        printf("is not divisible by 3.\n");
+    freeNumber(start);
+    return 0;
+}
