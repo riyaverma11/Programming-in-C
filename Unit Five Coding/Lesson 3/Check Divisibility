@@ -1,1 +1,5 @@
-
+// Your task is to write a new function divisibleByThree() which takes as input a 
+// pointer that holds the address of the start of a linked list of digits. Your 
+// function should then check whether the number stored in this linked list of digits
+// is divisible by three. The function should return the value 1 if indeed the number 
+// is divisible by three and it should return the value 0 otherwise.
