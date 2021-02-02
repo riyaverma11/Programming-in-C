@@ -84,3 +84,11 @@ struct digit *readNumber(void) {
     }
     return(start);
 }
+
+int divisibleByThree(struct digit * start) {
+    if((start->num)%3 == 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
