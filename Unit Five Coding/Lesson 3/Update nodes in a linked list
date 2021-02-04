@@ -18,3 +18,18 @@ void freeNumber(struct digit *start);
 int divisibleByThree(struct digit * start);
 struct digit * readNumber(void);
 int changeThrees(struct digit *start);
+
+int main(void) {
+    struct digit *start;
+    start = readNumber();
+
+    printf("The number ");
+    printNumber(start);
+    printf("was modified in %d places.\n", changeThrees(start));
+
+    printf("The new number is ");
+    printNumber(start);
+    freeNumber(start);
+
+    return 0;
+}
