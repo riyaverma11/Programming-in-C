@@ -21,3 +21,16 @@ struct digit *readNumber(void);
 int divisibleByThree(struct digit * start);
 int changeThrees(struct digit * start);
 int countRedun(struct digit * start);
+
+int main(void) {
+    struct digit *start;
+    start = readNumber();
+
+    printf("The number ");
+    printNumber(start);
+    printf("contains %d redundancies.\n", countRedun(start));
+
+    freeNumber(start);
+
+    return 0;
+}
