@@ -2,3 +2,11 @@
 // that holds the address of the start of a linked list of digits. Your function should 
 // change all of those digits in this linked list that equal 3 to the digit 9, and count
 // how many replacements were made. The function should return this number of replacements.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct digit {
+    int num;
+    struct digit *next;
+};
