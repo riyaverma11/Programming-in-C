@@ -13,3 +13,11 @@ struct digit {
     struct digit *next;
 };
 
+struct digit * createDigit(int);
+struct digit * append(struct digit * end, struct digit * newDigptr);
+void printNumber(struct digit *);
+void freeNumber(struct digit *);
+struct digit *readNumber(void); 
+int divisibleByThree(struct digit * start);
+int changeThrees(struct digit * start);
+int countRedun(struct digit * start);
