@@ -1,1 +1,6 @@
-
+// Your task is to write a new function countRedun() which takes as input a pointer
+// that holds the address of the start of a linked list of digits. Your function 
+// should count how many redundancies can be observed in the number stored in this 
+// list and return this count of redundancies. A redundancy is a digit which has 
+// previously already occurred in the number. For example, in the number 39534, the 
+// second '3' is a redundancy.
