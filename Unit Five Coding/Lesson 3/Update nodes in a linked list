@@ -33,3 +33,39 @@ int main(void) {
 
     return 0;
 }
+
+struct digit * createDigit(int dig) {
+    struct digit *ptr;
+    ptr = (struct digit *) malloc(sizeof(struct digit));
+    ptr->num = dig;
+    ptr->next = NULL;
+    return ptr;
+}
+
+struct digit * append(struct digit * end, struct digit * newDigptr) {
+    end->next = newDigptr;
+    return(end->next);
+}
+
+void printNumber(struct digit *start) {
+    struct digit * ptr = start;
+    while (ptr!=NULL) {
+        printf("%d", ptr->num);
+        ptr = ptr->next;
+    }
+    printf("\n");
+}
+
+void freeNumber(struct digit *start) {
+    struct digit * ptr = start;
+    struct digit * tmp;
+    while (ptr!=NULL) {
+        tmp = ptr->next;
+        free(ptr);
+        ptr = tmp;
+    }
+}
+
+struct digit * readNumber(void) {
+    char c;
+    int d;
