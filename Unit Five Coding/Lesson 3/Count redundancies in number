@@ -4,3 +4,12 @@
 // list and return this count of redundancies. A redundancy is a digit which has 
 // previously already occurred in the number. For example, in the number 39534, the 
 // second '3' is a redundancy.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct digit {
+    int num;
+    struct digit *next;
+};
+
