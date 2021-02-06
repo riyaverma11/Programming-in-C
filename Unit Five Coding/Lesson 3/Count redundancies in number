@@ -34,3 +34,11 @@ int main(void) {
 
     return 0;
 }
+
+struct digit *createDigit(int dig) {
+    struct digit *ptr;
+    ptr = (struct digit *) malloc(sizeof(struct digit));
+    ptr->num = dig;
+    ptr->next = NULL;
+    return ptr;
+}
