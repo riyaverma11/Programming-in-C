@@ -86,3 +86,27 @@ struct digit *readNumber(void) {
     }
     return(start);
 }
+
+int divisibleByThree(struct digit * start) {
+    struct digit * ptr = start;
+    int qsum = 0;
+    while (ptr!=NULL) {
+        qsum += ptr->num;
+        ptr = ptr->next;
+    }
+    if (qsum%3==0) return 1;
+    else return 0;
+}
+
+int changeThrees(struct digit * start) {
+    struct digit * ptr = start;
+    int sum = 0;
+    while (ptr!=NULL) {
+        if (ptr->num == 3) {
+            ptr->num = 9;
+            sum++;
+        }
+        ptr = ptr->next;
+    }
+    return(sum);
+}
