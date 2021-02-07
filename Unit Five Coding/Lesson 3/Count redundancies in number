@@ -110,3 +110,26 @@ int changeThrees(struct digit * start) {
     }
     return(sum);
 }
+
+int countRedun(struct digit * start) {
+    struct digit * pointer1 = start;
+    struct digit * pointer2 = start;
+    int numCheck;
+    int counter = 0;
+    
+    while (pointer1 != NULL) { 
+        numCheck = pointer1->num; //holds value for element at pointer1
+        pointer2 = pointer1->next; //holds value for element AT pointer 2 and AFTER pointer1
+        if (pointer2 != NULL && numCheck == pointer2->num) { //ALWAYS CHECK FOR NULL
+            counter++;
+            pointer1 = pointer1->next;
+            numCheck = pointer1->num;
+            pointer2 = pointer2->next;
+        } else {
+            pointer1 = pointer1->next; //move to value AFTER pointer 1
+            pointer2 = pointer2->next; //move to value AFTER pointer 2
+            //makes sure we compare prev number to next number
+        }
+    }
+    return counter;
+}
